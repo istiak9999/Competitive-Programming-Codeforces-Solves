@@ -1,3 +1,5 @@
+//Bismillahir Rahmanir Rahim
+//istiak9999		
 #pragma GCC optimize("Ofast")
 #pragma GCC target("avx,avx2,fma")
 #pragma GCC optimization("unroll-loops")
@@ -28,15 +30,26 @@ const int mod=998244353;
 #define DEBUG 0
 int main ()
 {
-	int n,k,p=0,a;
-	cin>>n>>k;
-	while(n--)
+	int n,m;
+	cin>>n>>m;
+	int current=1;
+	unsigned long long moves=0;
+	for(int i=0;i<m;i++)
 	{
-		cin>>a;
-		if(a+k<5) p++;
+		int goal;
+		cin>>goal;
+		
 
+		if(goal-current>=0){
+			moves+=goal-current;
+			current=goal;
+		}
+		else {
+			moves+=goal-current+n;
+			current = goal;
+		}
 	}
-	cout<<p/3<<endl;
+	cout<<moves<<endl;
 
     return 0;
 }

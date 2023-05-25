@@ -1,3 +1,5 @@
+//Bismillahir Rahmanir Rahim
+//istiak9999		
 #pragma GCC optimize("Ofast")
 #pragma GCC target("avx,avx2,fma")
 #pragma GCC optimization("unroll-loops")
@@ -28,15 +30,29 @@ const int mod=998244353;
 #define DEBUG 0
 int main ()
 {
-	int n,k,p=0,a;
-	cin>>n>>k;
+	int n;
+	string s;
+	cin>>n;
 	while(n--)
 	{
-		cin>>a;
-		if(a+k<5) p++;
+		cin>>s;
+		int c=0;
+		if(s[0]=='y'||s[0]=='Y')
+			c++;
+		if(s[1]=='e'||s[1]=='E')
+			c++;
+		if(s[2]=='s'||s[2]=='S')
+			c++;
+		if (c==3)
+			cout<<"YES"<<endl;
+		else
+			cout<<"NO"<<endl;
+
+
+
 
 	}
-	cout<<p/3<<endl;
+
 
     return 0;
 }

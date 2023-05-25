@@ -1,3 +1,5 @@
+//Bismillahir Rahmanir Rahim
+//istiak9999		
 #pragma GCC optimize("Ofast")
 #pragma GCC target("avx,avx2,fma")
 #pragma GCC optimization("unroll-loops")
@@ -27,16 +29,17 @@ const int mod=998244353;
 #define pf(a) printf("%d\n",a)
 #define DEBUG 0
 int main ()
-{
-	int n,k,p=0,a;
-	cin>>n>>k;
-	while(n--)
-	{
-		cin>>a;
-		if(a+k<5) p++;
-
-	}
-	cout<<p/3<<endl;
-
+{    int n;
+    cin >> n;
+    if (n >= 0)
+    {
+        cout << n << endl;
+    }
+    else
+    {
+        int a = n / 10;
+        int b = n / 100 * 10 + n % 10;
+        cout << max(a, b) << endl;
+    }
     return 0;
 }
